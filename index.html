@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elsim Engineering Firm</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+    }
+
+    /* Header */
+    header {
+      background: #003366;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      width: 70px;
+      margin-right: 15px;
+    }
+
+    .logo-text h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .logo-text p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    nav {
+      background: #001f3f;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Carousel */
+    .carousel-container {
+      position: relative;
+      max-width: 100%;
+      margin: 30px auto;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+
+    .circle-frame {
+      width: 220px;
+      height: 220px;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 4px solid #003366;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    .circle-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .circle-frame.split img {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 50%;
+      object-fit: cover;
+    }
+
+    .circle-frame.split .left-half {
+      left: 0;
+    }
+
+    .circle-frame.split .right-half {
+      right: 0;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-nav button {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      font-size: 20px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .section-link {
+      margin-top: 10px;
+      display: inline-block;
+      color: #003366;
+      text-decoration: underline;
+    }
+
+    /* Reduced Image Size for Service & Contact Sections */
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .img-box img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer {
+      background: #001f3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer img.social-icon {
+      width: 26px;
+      height: 26px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.jpg" alt="logo">
+      <div class="logo-text">
+        <h1>Elsim Engineering Firm</h1>
+        <p>Excellence in Electrical & Engineering Services</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+    <a href="testimonial.html">Testimonial</a>
+  </nav>
+
+  <!-- Carousel -->
+  <div class="carousel-container">
+    <div class="carousel-slide" id="carousel-slide">
+
+      <div class="circle-frame">
+        <img src="images/fieldwork1.jpg" alt="Field Work 1">
+      </div>
+
+      <div class="circle-frame split">
+        <img src="images/wiringteam.jpg" class="left-half" alt="Team 1">
+        <img src="images/installteam.jpg" class="right-half" alt="Team 2">
+      </div>
+
+      <div class="circle-frame">
+        <img src="images/engineer1.jpg" alt="Engineer">
+        <img src="images/engineer2.jpg" alt="Engineer">
+        <img src="images/engineer3.jpg" alt="Engineer">
+      </div>
+
+      <div class="circle-frame split">
+        <img src="images/home1.jpg" alt="home1">
+      </div>
+      <div class="circle-frame">
+        <img src="images/home2.jpg" alt="home2">
+      </div>
+      <div class="circle-frame">
+        <img src="images/home3.jpg" alt="home3">
+      </div>
+      <div class="circle-frame">
+        <img src="images/home4.jpg" alt="home4">
+      </div>
+
+      <div class="carousel-nav">
+        <button onclick="prevSlide()">❮</button>
+        <button onclick="nextSlide()">❯</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section>
+    <h2 class="section-title">Our Services</h2>
+    <p>We offer electrical installation, maintenance, and consulting for residential, commercial, and industrial clients.</p>
+    <a href="services.html" class="section-link">Explore Services →</a>
+    <div class="box">
+      <div class="img-box">
+        <img src="images/engineer3.jpg" alt="Engineer">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Teaser -->
+  <section>
+    <h2 class="section-title">Get In Touch</h2>
+    <p>Reach out for inquiries, support or quotations.</p>
+    <a href="contact.html" class="section-link">Contact Us →</a>
+    <div class="box">
+      <div class="img-box">
+        <img src="images/contact.jpg" alt="Contact">
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Teaser -->
+  <section>
+    <h2 class="section-title">Read Our Blog</h2>
+    <p>Tips, updates, and electrical news from the Elsim team.</p>
+    <a href="blog.html" class="section-link">Visit Blog →</a>
+  </section>
+
+  <!-- Testimonials -->
+  <section>
+    <h2 class="section-title">What Our Clients Say</h2>
+    <p>Real feedback from people we've worked with across Ghana.</p>
+    <a href="testimonial.html" class="section-link">Read Testimonials →</a>
+  </section>
+
+  <!-- Google Map Section -->
+  <section>
+    <h2 class="section-title">Our Office Location</h2>
+    <p>We are located at Madina-Oyarifa, Accra.</p>
+    <div style="width: 100%; max-width: 100%; height: 350px; margin-top: 20px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+      <iframe
+        src="https://www.google.com/maps?q=Madina-Oyarifa,+Ghana&output=embed"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>📞 +233538578943 / +233264357395 | 📧 elsimegineeringfirm@gmail.com</p>
+    <p>
+      <a href="https://facebook.com"><img src="images/facebook.jpg" alt="Facebook" class="social-icon" /></a>
+      <a href="https://twitter.com"><img src="images/twittericon.jpg" alt="Twitter" class="social-icon" /></a>
+      <a href="https://instagram.com"><img src="images/instagramicon.jpg" alt="Instagram" class="social-icon" /></a>
+      <a href="https://wa.me/233538578943"><img src="images/whatsappicon.jpg" alt="WhatsApp" class="social-icon" /></a>
+      <a href="https://tiktok.com"><img src="images/titokicon.jpg" alt="TikTok" class="social-icon" /></a>
+      <a href="https://telegram.org"><img src="images/telegramicon.jpg" alt="Telegram" class="social-icon" /></a>
+    </p>
+    <p>&copy; 2025 Elsim Engineering Firm</p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const slideContainer = document.getElementById("carousel-slide");
+    const slides = document.querySelectorAll(".circle-frame");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const width = slides[0].offsetWidth + 20;
+      slideContainer.style.transform = translateX(-${index * width}px);
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 5000);
+  </script>
+
+</body>
+</html>
