@@ -294,6 +294,39 @@
     </video>
 </section> 
 </div>
+  </section> 
+</div>
+<!-- Remaining Company Videos (Part 2 to 5) -->
+<section>
+  <h2 class="section-title">📽 Continue Watching</h2>
+  <p>Explore the remaining parts of our company introduction video.</p>
+
+  <!-- Smaller Video Player -->
+  <div style="width: 100%; max-width: 500px; margin: 0 auto;">
+    <video id="switchVideo" width="100%" height="280" controls style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin-bottom: 20px;">
+      <source src="video/clip1 .mp4" type="video/mp4">
+    </video>
+    </div>
+
+    <!-- Video Buttons -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+      <button onclick="changeClip('video/clip2.mp4')" style="padding: 8px 14px; background-color: #003366; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">▶ Part 2</button>
+      <button onclick="changeClip('video/clip3.mp4')" style="padding: 8px 14px; background-color: #003366; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">▶ Part 3</button>
+      <button onclick="changeClip('video/clip4.mp4')" style="padding: 8px 14px; background-color: #003366; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">▶ Part 4</button>
+      <button onclick="changeClip('video/clip5.mp4')" style="padding: 8px 14px; background-color: #003366; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">▶ Part 5</button>
+    </div>
+  </div>
+</section>
+
+<!-- Script -->
+<script>
+  function changeClip(src) {
+    const video = document.getElementById("switchVideo");
+    video.querySelector("source").src = src;
+    video.load();
+    video.play();
+  }
+</script>
   <!-- Footer -->
   <div class="footer">
     <p>📞 +233538578943 / +233264357395 | 📧 elsimegineeringfirm@gmail.com</p>
